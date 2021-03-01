@@ -1,0 +1,26 @@
+ul{
+    padding:15px;
+    margin:10px;
+    background-color: #FC766AFF;
+}
+li{
+    display: inline-block;
+    color:#5B84B1FF;
+    margin-right:200px;
+}
+#secondli{
+    margin-left:200px;
+    display: inline-block;
+    color:#5B84B1FF;
+}
+p{
+    background-color:#DF6589FF;
+    color: #435E55FF;
+    font-size: 15px;
+    border-radius: 20px;
+    margin:10px;
+    padding: 10px;
+}
+body{
+    background-color:#3C1053FF;
+}

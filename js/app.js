@@ -1,4 +1,5 @@
 'use strict';
+let counter=0;
 confirm('Lets see how well you know me\n answer these simple questions');
 let userName=prompt('What is your name dear');
 function greetings(name){
@@ -8,6 +9,7 @@ greetings(userName);
 let birthGuess=prompt('Were I born in Zaqra').toLocaleLowerCase();
 if(birthGuess==='y' || birthGuess==='yes'){
   alert('correct good job');
+  counter+=1;
   // console.log('correct good job')
 }else if(birthGuess==='n' || birthGuess==='no'){
   alert('I thought you knew me better');
@@ -16,6 +18,8 @@ if(birthGuess==='y' || birthGuess==='yes'){
 let ageGuess=prompt('Am I 24 years old').toLocaleLowerCase();
 if(ageGuess==='y' || ageGuess==='yes'){
   alert('correct good job');
+  counter+=1;
+
   // console.log('correct good job')
 }else if(ageGuess==='n' || ageGuess==='no'){
   alert('I thought you knew me better');
@@ -24,6 +28,7 @@ if(ageGuess==='y' || ageGuess==='yes'){
 let heightGuess=prompt('Am I a short guy').toLocaleLowerCase();
 if(heightGuess==='y' || heightGuess==='yes'){
   alert('correct good job');
+  counter+=1;
   // console.log('correct good job')
 }else if(heightGuess==='n' || heightGuess==='no'){
   alert('I thought you knew me better');
@@ -31,6 +36,7 @@ if(heightGuess==='y' || heightGuess==='yes'){
 }
 let smartGuess=prompt('Am I smart').toLocaleLowerCase();
 if(smartGuess==='y' || smartGuess==='yes'){
+  counter+=1;
   alert('correct good job');
   // console.log('correct good job')
 }else if(smartGuess==='n' || smartGuess==='no'){
@@ -39,7 +45,8 @@ if(smartGuess==='y' || smartGuess==='yes'){
 }
 let physicsGuess=prompt('Am I into quantum phyics').toLocaleLowerCase();
 if(physicsGuess==='y' || physicsGuess==='yes'){
-  alert('correct good job ' +userName);
+  counter+=1;
+  alert('correct good job ' +userName +'\n' + 'you got ' + counter + ' out of 5');
   // console.log('correct good job ' + userName)
 }else if(smartGuess==='n' || smartGuess==='no'){
   alert('wrong I love it '+ userName);

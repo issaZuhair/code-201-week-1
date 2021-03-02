@@ -3,9 +3,9 @@ ul{
     margin:10px;
     background-color:#DF6589FF;
 }
-li{
+ul >li{ 
     display: inline-block;
-    color:#5B84B1FF;
+    color:ivory;
     margin-right:200px;
 }
 #secondli{
@@ -24,6 +24,7 @@ p{
 }
 body{
     background-color:#3C1053FF;
+
 }
 footer {
     position: fixed;
@@ -33,5 +34,13 @@ footer {
     background-color:#DF6589FF;
     color: white;
     text-align: center;
-    border-radius: 5em;
+    border-radius: 50px;
   }
+  ol {
+      display: inline-block;
+  }
+ ol >li{
+    margin: 25px;
+     float: left;
+    list-style-type:decimal-leading-zero;
+ }

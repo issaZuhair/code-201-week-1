@@ -46,9 +46,63 @@ if(smartGuess==='y' || smartGuess==='yes'){
 let physicsGuess=prompt('Am I into quantum phyics').toLocaleLowerCase();
 if(physicsGuess==='y' || physicsGuess==='yes'){
   counter+=1;
-  alert('correct good job ' +userName +'\n' + 'you got ' + counter + ' out of 5');
+  alert('correct good job ' +userName);
   // console.log('correct good job ' + userName)
 }else if(smartGuess==='n' || smartGuess==='no'){
   alert('wrong I love it '+ userName);
   // console.log('wrong I love it ' + userName);
 }
+
+let userHint=['too high', 'too low', 'out of attempts'];
+let guessCount=4;
+let randomNumber = Math.floor(Math.random() * 101);
+do{
+  let userNumber=parseInt(prompt('guess a number between 1 & 100\n you have 4 shots'));
+  guessCount=guessCount-1;
+  if(userNumber<randomNumber){
+    alert(userHint[1]);
+  }
+  if(userNumber>randomNumber){
+    alert(userHint[0]);
+  }
+
+
+  if(userNumber===randomNumber){
+    alert('Good gues you got it');
+    counter+=1;
+
+    break;
+  }
+  if(guessCount===1){
+    alert(userHint[2]);
+  }
+}while(guessCount>1);
+
+let possibleCauses=['neutron energy', 'type of reaction', 'target energy','target nucleus'];
+let causeNum=possibleCauses.length-1;
+let allowedAttempts=6;
+let userguessed;
+let i=0;
+
+do{
+  let neutronGuess=prompt('Name a factor that affects the probability of a nuclear reaction \n you get 6 chinces to guess one');
+  for(i;i<=causeNum;i++){
+    if(possibleCauses[i]===neutronGuess){
+      alert('good guess, here is the list of the other causes' + '\n'+ possibleCauses);
+      counter+=1;
+
+      userguessed=1;
+      break;
+    }
+   
+  }
+  if(userguessed===1){
+    break;
+  }
+  allowedAttempts-=1;
+  if(allowedAttempts===1){
+    alert('you did not gues, the answer is any of the following \n '+ possibleCauses);
+  }
+}while(allowedAttempts>1);
+
+alert('you got ' + counter +' out of 7 questions');
